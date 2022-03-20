@@ -1,0 +1,5 @@
+com.devmind.annotation.springapp.MyCustomBeanProcessor=org.springframework.stereotype.Component
+com.devmind.annotation.springapp.WebDevTeacher=org.springframework.stereotype.Component
+temaAdnotari.JavaTeacher=org.springframework.stereotype.Component
+temaAdnotari.WebDevTeacher=org.springframework.stereotype.Component
+temaAdnotari.WisdomService=org.springframework.stereotype.Component
