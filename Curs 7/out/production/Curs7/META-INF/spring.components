@@ -1,0 +1,7 @@
+tema.Autocar=org.springframework.stereotype.Component
+tema.DriveTest=org.springframework.stereotype.Component
+tema.Masina=org.springframework.stereotype.Component
+tema.Motocicleta=org.springframework.stereotype.Component
+tema.Motor=org.springframework.stereotype.Component
+tema.Parking=org.springframework.stereotype.Component
+temaLifecyle.Task=org.springframework.stereotype.Component
