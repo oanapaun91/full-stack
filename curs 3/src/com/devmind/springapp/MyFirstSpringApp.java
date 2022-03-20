@@ -1,21 +1,29 @@
 package com.devmind.springapp;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MyFirstSpringApp {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(TeacherConfiguration.class);
+//      ClassPathXmlApplicationContext contextXML = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        // create the object
-        ITeacher theTeacher = (ITeacher) context.getBean("myTeacher", ITeacher.class);
+        ITeacher myTeacher = context.getBean("newTeacher", MyTeacher.class);
 
-        // use the object
-        System.out.println(theTeacher.getHomework());
+        MathTeacher mathTeacher = context.getBean("mathTeacher", MathTeacher.class);
 
-        System.out.println(theTeacher.getWisdom());
+        ITeacher javaTeacher= context.getBean("javaTeacher", JavaTeacher.class);
 
-        System.out.println(theTeacher.getHomeworkService());
+        System.out.println(myTeacher.getHomework());
+
+        System.out.println(myTeacher.getWisdom());
+
+        System.out.println(myTeacher.getHomeworkService());
+
+        System.out.println(mathTeacher.getWisdom());
+
+        System.out.println(javaTeacher.getHomework());
 
         context.close();
     }

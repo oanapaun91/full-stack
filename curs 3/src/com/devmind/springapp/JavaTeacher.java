@@ -1,5 +1,8 @@
 package com.devmind.springapp;
 
+import org.springframework.stereotype.Component;
+
+
 public class JavaTeacher implements ITeacher{
     private WisdomWordsService wisdomService;
     private HomeworkService homeworkService;
@@ -11,7 +14,7 @@ public class JavaTeacher implements ITeacher{
 
     @Override
     public String getHomework() {
-        return "Create 100 classes";
+        return "java homework";
     }
 
     @Override
