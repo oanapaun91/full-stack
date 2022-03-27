@@ -6,22 +6,19 @@ import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class StudentConfiguration {
-    String firstName;
-    String lastName;
-    int grade;
 
     @Bean
     public Student student(){
-        return new Student(lastName, firstName, grade);
+        return new Student("Paun", "Oana", 2);
     }
 
-    @Bean("studentPrototype")
+    @Bean
     @Scope("prototype")
-    public Student student(){
+    public Student studentPrototype(){
         Student student = new Student();
-        student.setFirstName(firstName);
-        student.setLastName(lastName);
-        student.setGrade(grade);
+        student.setFirstName("Oana");
+        student.setLastName("Paun");
+        student.setGrade(2);
         return student;
     }
 

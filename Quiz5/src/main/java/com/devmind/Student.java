@@ -7,7 +7,10 @@ public class Student {
    private String firstName;
    private int grade;
 
-  @Autowired(required = false)
+   public Student(){
+   }
+
+//  @Autowired(required = false)
    public Student(String lastName, String firstName, int grade){
       this.lastName = lastName;
       this.firstName = firstName;
