@@ -11,14 +11,12 @@
     <title>About</title>
 </head>
 <body>
-<h3>Noi suntem:</h3>
-<p> Un site nou</p>
+<p>Noi suntem un site nou</p>
 <p> Locatie: Bucuresti</p>
-<p> Un site nou</p>
-
-<form action="user" method="post">
-    <input type="file" name="Image"><br>
-</form>
-
 </body>
+
+<div>
+    <img src="<c:url value="resources/images/image.jpg" />" alt="image" />
+</div>
+
 </html>

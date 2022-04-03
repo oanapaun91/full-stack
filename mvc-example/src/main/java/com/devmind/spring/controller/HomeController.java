@@ -1,21 +1,29 @@
 package com.devmind.spring.controller;
 
-import com.devmind.spring.model.About;
+//import com.devmind.spring.model.About;
 import com.devmind.spring.model.User;
+import org.springframework.core.io.Resource;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.context.support.ServletContextResource;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.InputStream;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
 
 @Controller
-public class HomeController {
+public class HomeController{
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String home(Locale locale, Model model){
@@ -41,8 +49,8 @@ public class HomeController {
         return "user";
     }
 
-//    @RequestMapping(value = "/about", method = RequestMethod.GET)
-//    public String about(@Validated About about) {
-//        System.out.println("About page");
-//    }
-}
+    @RequestMapping(value = "/about", method = RequestMethod.GET)
+    public String about() {
+        return "about";
+    }
+   }
