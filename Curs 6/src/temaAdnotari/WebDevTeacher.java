@@ -7,12 +7,12 @@ import org.springframework.stereotype.Component;
 public class WebDevTeacher implements ITeacher {
     private WisdomService wisdomService;
 
-    public WebDevTeacher(WisdomService wisdomService){
+    public WebDevTeacher(WisdomService wisdomService) {
         this.wisdomService = wisdomService;
     }
 
-   @Override
-    public String getHomeWork(){
+    @Override
+    public String getHomeWork() {
         return "WebDev homework";
     }
 }

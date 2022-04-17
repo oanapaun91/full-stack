@@ -8,13 +8,13 @@ import org.springframework.context.annotation.Scope;
 public class StudentConfiguration {
 
     @Bean
-    public Student student(){
+    public Student student() {
         return new Student("Paun", "Oana", 2);
     }
 
     @Bean
     @Scope("prototype")
-    public Student studentPrototype(){
+    public Student studentPrototype() {
         Student student = new Student();
         student.setFirstName("Oana");
         student.setLastName("Paun");

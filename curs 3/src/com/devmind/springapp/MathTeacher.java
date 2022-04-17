@@ -11,7 +11,6 @@ public class MathTeacher implements ITeacher {
     private static final String MATH_TEACHER_PREFIX = "Math teacher says: ";
 
 
-
     @Override
     public String getHomework() {
         return "math homework";

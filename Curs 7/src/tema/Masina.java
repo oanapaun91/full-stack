@@ -9,7 +9,7 @@ public class Masina implements Automobil {
     private Motor motor;
 
     @Autowired
-    public Masina (Motor motor){
+    public Masina(Motor motor) {
         this.motor = motor;
     }
 

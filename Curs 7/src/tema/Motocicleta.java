@@ -9,7 +9,7 @@ public class Motocicleta implements Automobil {
     private Motor motor;
 
     @Autowired
-    public void setMotor(Motor motor){
+    public void setMotor(Motor motor) {
         this.motor = motor;
     }
 

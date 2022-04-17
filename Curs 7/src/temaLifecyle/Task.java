@@ -26,14 +26,14 @@ public class Task {
         }
     }
 
-    public Integer generateID(){
+    public Integer generateID() {
         return new Random().nextInt(1000);
     }
 
     @PostConstruct
-    private void init(){
+    private void init() {
         System.out.println("init...");
-        this.numberOfTasks ++;
+        this.numberOfTasks++;
         this.taskId = generateID();
         this.taskName = "Task" + taskId;
         this.executionTime = new Random().nextInt(20);
@@ -41,7 +41,7 @@ public class Task {
     }
 
     @PreDestroy
-    private void destroy(){
+    private void destroy() {
         numberOfTasks -= 1;
         System.out.println("Task distrus: " + this.taskName);
     }

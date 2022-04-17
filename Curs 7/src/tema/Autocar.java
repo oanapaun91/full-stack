@@ -5,7 +5,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Autocar implements Automobil {
-    @Autowired private Motor motor;
+    @Autowired
+    private Motor motor;
 
     @Override
     public String travel() {

@@ -11,15 +11,16 @@ import org.springframework.stereotype.Component;
 public class DriveTest {
     Autocar autocar;
     Masina masina;
-    @Autowired Motocicleta motocicleta;
+    @Autowired
+    Motocicleta motocicleta;
 
     @Autowired
-    public DriveTest (Masina masina){
+    public DriveTest(Masina masina) {
         this.masina = masina;
     }
 
     @Autowired
-    public void setAutocar(Autocar autocar){
+    public void setAutocar(Autocar autocar) {
         this.autocar = autocar;
     }
 }

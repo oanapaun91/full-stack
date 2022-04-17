@@ -1,6 +1,7 @@
 package com.devmind.spring.controller;
 
 //import com.devmind.spring.model.About;
+
 import com.devmind.spring.model.User;
 import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
@@ -23,10 +24,10 @@ import java.util.Locale;
 
 
 @Controller
-public class HomeController{
+public class HomeController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String home(Locale locale, Model model){
+    public String home(Locale locale, Model model) {
         System.out.println("Home Page Requested, locale = " + locale);
         Date date = new Date();
         DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
@@ -53,4 +54,4 @@ public class HomeController{
     public String about() {
         return "about";
     }
-   }
+}

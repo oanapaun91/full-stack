@@ -3,7 +3,7 @@ package com.devmind.springapp;
 import org.springframework.stereotype.Component;
 
 
-public class JavaTeacher implements ITeacher{
+public class JavaTeacher implements ITeacher {
     private WisdomWordsService wisdomService;
     private HomeworkService homeworkService;
 
@@ -18,12 +18,12 @@ public class JavaTeacher implements ITeacher{
     }
 
     @Override
-    public String getWisdom(){
-    return wisdomService.getMessage();
+    public String getWisdom() {
+        return wisdomService.getMessage();
     }
 
     @Override
-    public String getHomeworkService(){
+    public String getHomeworkService() {
         return homeworkService.getHomeworkService();
     }
 }

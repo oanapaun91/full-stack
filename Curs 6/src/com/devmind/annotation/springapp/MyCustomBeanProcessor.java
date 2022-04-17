@@ -44,7 +44,7 @@ public class MyCustomBeanProcessor implements BeanPostProcessor, BeanFactoryAwar
             for (Object bean : prototypeBeans) {
 
                 if (bean instanceof DisposableBean) {
-                    DisposableBean disposable = (DisposableBean)bean;
+                    DisposableBean disposable = (DisposableBean) bean;
                     try {
                         disposable.destroy();
                     } catch (Exception e) {

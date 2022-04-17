@@ -1,4 +1,5 @@
 package com.devmind.springapp;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -9,12 +10,12 @@ public class MyTeacher implements ITeacher {
 
 
     @Autowired
-    public MyTeacher(WisdomWordsService wisdomWordsService, Notebook notebook){
+    public MyTeacher(WisdomWordsService wisdomWordsService, Notebook notebook) {
         this.wisdomWordsService = wisdomWordsService;
         this.notebook = notebook;
     }
 
-    public void saySomething(){
+    public void saySomething() {
         System.out.println("hello");
     }
 

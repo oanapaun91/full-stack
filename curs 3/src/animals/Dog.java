@@ -1,9 +1,9 @@
 package animals;
 
-public class Dog implements IAnimal{
+public class Dog implements IAnimal {
 
     @Override
-    public String makeSound(){
+    public String makeSound() {
         return "Ham";
     }
 }

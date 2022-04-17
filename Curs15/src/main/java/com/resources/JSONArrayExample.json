@@ -1,21 +1,22 @@
 [
   {
-  "courseName": "asd",
-  "trainer": {
-    "name": "Dan Popescu",
-    "zoomId": 123321
+    "courseName": "asd",
+    "trainer": {
+      "name": "Dan Popescu",
+      "zoomId": 123321
+    },
+    "online": true,
+    "courseDays": [
+      {
+        "day": "Monday",
+        "startingHour": "18:20"
+      },
+      {
+        "day": "Wednesday",
+        "startingHour": "18:20"
+      }
+    ]
   },
-  "online": true,
-  "courseDays": [{
-    "day": "Monday",
-    "startingHour": "18:20"
-  },
-    {
-      "day": "Wednesday",
-      "startingHour": "18:20"
-    }
-  ]
-},
   {
     "courseName": "asd2",
     "trainer": {
@@ -23,10 +24,11 @@
       "zoomId": 123321
     },
     "online": true,
-    "courseDays": [{
-      "day": "Monday",
-      "startingHour": "18:20"
-    },
+    "courseDays": [
+      {
+        "day": "Monday",
+        "startingHour": "18:20"
+      },
       {
         "day": "Wednesday",
         "startingHour": "18:20"

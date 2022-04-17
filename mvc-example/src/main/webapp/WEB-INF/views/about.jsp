@@ -16,7 +16,7 @@
 </body>
 
 <div>
-    <img src="<c:url value="resources/images/image.jpg" />" alt="image" />
+    <img src="<c:url value="resources/images/image.jpg" />" alt="image"/>
 </div>
 
 </html>

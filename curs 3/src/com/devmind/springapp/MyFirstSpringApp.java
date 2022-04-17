@@ -13,7 +13,7 @@ public class MyFirstSpringApp {
 
         MathTeacher mathTeacher = context.getBean("mathTeacher", MathTeacher.class);
 
-        ITeacher javaTeacher= context.getBean("javaTeacher", JavaTeacher.class);
+        ITeacher javaTeacher = context.getBean("javaTeacher", JavaTeacher.class);
 
         System.out.println(myTeacher.getHomework());
 

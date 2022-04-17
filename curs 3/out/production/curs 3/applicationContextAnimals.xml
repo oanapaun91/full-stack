@@ -4,12 +4,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean
-            id = "firstAnimal"
-            class = "animals.Dog">
+            id="firstAnimal"
+            class="animals.Dog">
     </bean>
 
     <bean
-            id = "secondAnimal"
-            class = "animals.Cat">
+            id="secondAnimal"
+            class="animals.Cat">
     </bean>
 </beans>

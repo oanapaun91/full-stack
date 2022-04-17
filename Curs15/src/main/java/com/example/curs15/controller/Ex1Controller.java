@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.io.*;
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
@@ -19,9 +20,9 @@ public class Ex1Controller {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             Course course = objectMapper.readValue(new File("src/main/java/com/resources/JSONExample.json"), Course.class);
-            return  course.toString();
+            return course.toString();
         } catch (IOException e) {
-            return  e.toString();
+            return e.toString();
         }
     }
 
@@ -31,23 +32,24 @@ public class Ex1Controller {
         try {
             Course[] courses = objectMapper.readValue(new File("src/main/java/com/resources/JSONArrayExample.json"), Course[].class);
             String result = "";
-            for (Course course: courses) {
+            for (Course course : courses) {
                 result += course.toString();
                 result += "\n";
             }
-            return  result;
+            return result;
         } catch (IOException e) {
-            return  e.toString();
+            return e.toString();
         }
     }
 
     @RequestMapping(value = "/messages", method = POST)
-    public ResponseEntity<Message> showMessage(@RequestBody Message message, @RequestHeader(value = "authentication") String authentication){
+    public ResponseEntity<Message> showMessage(@RequestBody Message message, @RequestHeader(value = "authentication") String authentication) {
         if (authentication.equals("devmind-api-key")) {
             return new ResponseEntity(message, HttpStatus.CREATED);
         } else {
             return new ResponseEntity(message, HttpStatus.UNAUTHORIZED);
         }
     }
+
 }
 

@@ -16,7 +16,7 @@
 <P>Timpul pe server este: ${serverTime}.</p>
 
 <form action="user" method="post">
-<%--    <form action="user" method="post">--%>
+    <%--    <form action="user" method="post">--%>
     <input type="text" name="userName"><br>
     <input type="text" name="email"><br>
     <input type="text" name="telefon"><br>
