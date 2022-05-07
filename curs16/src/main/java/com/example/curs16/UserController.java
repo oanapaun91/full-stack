@@ -49,14 +49,4 @@ public class UserController {
         return new ResponseEntity("Nu exista cont", HttpStatus.BAD_REQUEST);
     }
 
-//    @RequestMapping(value = "/logout/{email}", method = RequestMethod.GET)
-//    public ResponseEntity<ArrayList<User>> handleLogout(@Valid @PathVariable String email) {
-//        for (User j: loggedList) {
-//            if (j.getEmail().equals(email)) {
-//                loggedList.remove(j);
-//                return new ResponseEntity(loggedList, HttpStatus.ACCEPTED);
-//            }
-//        }
-//        return new ResponseEntity(loggedList, HttpStatus.NOT_FOUND);
-//    }
 }
