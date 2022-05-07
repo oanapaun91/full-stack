@@ -18,6 +18,7 @@ import org.json.*;
 @RestController
 public class HomeController {
     String op;
+    Faker faker = new Faker();
 
     @RequestMapping(value = "/time", method = RequestMethod.GET)
     public LocalTime time(@RequestParam(value = "timeZone") String timeZone) {
@@ -27,8 +28,7 @@ public class HomeController {
 
     @RequestMapping(value = "/harry-potter", method = RequestMethod.GET)
     public String harryPotter() {
-        Faker faker = new Faker();
-        String name = faker.name().fullName();
+        String name = this.faker.name().fullName();
         return name;
     }
 
