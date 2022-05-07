@@ -11,12 +11,12 @@
     <title>About</title>
 </head>
 <body>
-<p>Noi suntem un site nou</p>
+<p>Acesta este un site nou</p>
 <p> Locatie: Bucuresti</p>
 </body>
 
 <div>
-    <img src="<c:url value="resources/images/image.jpg" />" alt="image"/>
+    <img src="${pageContext.request.contextPath}/resources/images/image.jpg" />" alt="image"/>
 </div>
 
 </html>
