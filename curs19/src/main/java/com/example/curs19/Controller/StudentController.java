@@ -58,7 +58,8 @@ public class StudentController {
          updatedStudent.getAdresa().setLocalitate(adresa.getLocalitate());
          updatedStudent.getAdresa().setNumar(adresa.getNumar());
          updatedStudent.getAdresa().setStrada(adresa.getStrada());
-         return new ResponseEntity<>(studentRepository.saveAndFlush(updatedStudent), HttpStatus.OK);
+         studentRepository.saveAndFlush(updatedStudent);
+         return new ResponseEntity<>(updatedStudent, HttpStatus.OK);
       }
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
    }
@@ -67,7 +68,7 @@ public class StudentController {
    public ResponseEntity<Object> deleteStudent(@PathVariable Integer studentId) {
       Optional<Student> studentToDelete = studentRepository.findById(studentId);
       if (studentToDelete.isPresent()) {
-         studentRepository.deleteById(studentId);
+         studentRepository.deleteById(studentId); //arunca eroare?
          return new ResponseEntity<>(studentToDelete.get(), HttpStatus.OK);
       }
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);

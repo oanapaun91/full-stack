@@ -26,12 +26,9 @@ public class ProfesorController {
     }
 
     @GetMapping(path = "/{id}")
-    public ResponseEntity<Optional<Profesor>> getProfesor(@PathVariable Integer id){
-        Optional<Profesor> profesor = profesorRepository.findById(id);
-        if (checkProfesor(id)){
-            return new ResponseEntity(profesor.get(), HttpStatus.ACCEPTED);
-        }
-        return new ResponseEntity(HttpStatus.BAD_REQUEST);
+    public ResponseEntity<Optional<Profesor>> getProfesor(@PathVariable Integer id) {
+        Profesor profesor = profesorRepository.findById(id).orElseThrow();
+        return new ResponseEntity(profesor, HttpStatus.ACCEPTED);
     }
 
     @GetMapping(path = "materii/{id}")
