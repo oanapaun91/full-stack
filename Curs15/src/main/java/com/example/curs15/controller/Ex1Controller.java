@@ -14,10 +14,10 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
 
 @RestController
 public class Ex1Controller {
+    ObjectMapper objectMapper = new ObjectMapper();
 
     @RequestMapping(value = "/jsonfile", method = GET)
     public String parseJson() {
-        ObjectMapper objectMapper = new ObjectMapper();
         try {
             Course course = objectMapper.readValue(new File("src/main/java/com/resources/JSONExample.json"), Course.class);
             return course.toString();
@@ -28,7 +28,6 @@ public class Ex1Controller {
 
     @RequestMapping(value = "/jsonarray", method = GET)
     public String parseJsonArray() {
-        ObjectMapper objectMapper = new ObjectMapper();
         try {
             Course[] courses = objectMapper.readValue(new File("src/main/java/com/resources/JSONArrayExample.json"), Course[].class);
             String result = "";
