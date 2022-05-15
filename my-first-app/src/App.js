@@ -1,26 +1,18 @@
 import logo from './devmindLogo.png';
 import './App.css';
-import Counter from "./counter/Counter";
+import Counter from "./components/counter/Counter";
+import EmployeeOverview from "./components/EmployeeOverview.jsx";
+import WelcomeMessage from "./components/WelcomeMessage";
+import StopWatch from "./components/StopWatch";
 
 function App() {
   return (
-    <div className="App">
-        <Counter/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome! This is my first React app!
-        </p>
-        <a
-          className="App-link"
-          href="https://www.devmind.ro"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
 
+    <div className="App">
+        <WelcomeMessage></WelcomeMessage>
+        <Counter/>
+        <EmployeeOverview/>
+        <StopWatch/>
     </div>
   );
 }
