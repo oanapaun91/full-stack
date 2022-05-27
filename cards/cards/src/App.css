@@ -1,0 +1,18 @@
+/*.App {*/
+/*  flex-direction: row;*/
+/*}*/
+
+#root{
+  flex-direction: column;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+div {
+  flex-direction: column;
+}
